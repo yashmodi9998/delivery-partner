@@ -7,7 +7,6 @@ import 'package:deliveryapplication/screens/cart_screen.dart';
 import 'package:deliveryapplication/screens/login_page.dart';
 import 'package:deliveryapplication/screens/orders_screen.dart';
 import 'package:deliveryapplication/screens/product_detail_screen.dart';
-import 'package:deliveryapplication/screens/splash_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:deliveryapplication/ReusableWidgets/app_drawer.dart';
 import 'package:deliveryapplication/ReusableWidgets/cart_item.dart';
 import 'package:deliveryapplication/ReusableWidgets/textDivider.dart';
@@ -73,6 +71,7 @@ class _CartScreenState extends State<CartScreen> {
                                   showDialog(
                                       context: context,
                                       builder: (context) => AlertDialog(
+                                        elevation: 10,
                                             title: const Text('Are you sure?'),
                                             content: const Text(
                                                 'You want to accept this order'),
@@ -84,33 +83,33 @@ class _CartScreenState extends State<CartScreen> {
                                                 },
                                               ),
                                               GestureDetector(
-                                                child: const Text('Yes'),
-                                                onTap: () {
-                                                  Navigator.of(context).pop();
-                                                  if (cart.itemCount != 0) {
-                                                    Provider.of<Orders>(context,
-                                                            listen: false)
-                                                        .addOrder(
-                                                      cart.items.values
-                                                          .toList(),
-                                                      cart.totalAmount,
-                                                    );
-                                                    cart.clear();
-                                                    NotificationService()
-                                                        .showNotification(
-                                                      title:
-                                                          'Hey, You have new order!!',
-                                                      body:
-                                                          'Please, spend a time to complete ',
-                                                    );
-                                                    Navigator.of(context).push(
-                                                        MaterialPageRoute(
-                                                            builder: (context) =>
-                                                                OrdersScreen()));
-                                                  }
-                                                },
-                                              ),
-                                            ],
+                                            child: const Text('Yes'),
+                                            onTap: () {
+                                              Navigator.of(context).pop();
+                                              if (cart.itemCount != 0) {
+                                                Provider.of<Orders>(context,
+                                                    listen: false)
+                                                    .addOrder(
+                                                  cart.items.values
+                                                      .toList(),
+                                                  cart.totalAmount,
+                                                );
+                                                cart.clear();
+                                                NotificationService()
+                                                    .showNotification(
+                                                  title:
+                                                  'Hey, You have new order!!',
+                                                  body:
+                                                  'Please, spend a time to complete ',
+                                                );
+                                                Navigator.of(context).push(
+                                                    MaterialPageRoute(
+                                                        builder: (context) =>
+                                                            OrdersScreen()));
+                                              }
+                                            },
+                                          ),
+                                        ],
                                           ));
                                 })
                           ],
@@ -154,8 +153,7 @@ class _CartScreenState extends State<CartScreen> {
                         ),
                       ],
                     )
-                  : Container(
-                      child: Column(
+                  : Column(
                       children: [
                         Image.network(
                             'https://media.istockphoto.com/id/1173117709/vector/cupid-with-shopping-cart-illustration.jpg?s=612x612&w=0&k=20&c=rG_lYAxIHe_7eCa6GF-gSTGITKDAFz25T9TWkKhrQfQ='),
@@ -164,7 +162,7 @@ class _CartScreenState extends State<CartScreen> {
                           style: Styles.btnText,
                         ),
                       ],
-                    )),
+                    ),
             ),
           ),
           Expanded(

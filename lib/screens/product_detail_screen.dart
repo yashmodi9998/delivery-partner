@@ -83,14 +83,14 @@ class ProductDetailScreen extends StatelessWidget {
                       height: size.height * 0.25,
                     ),
                     SizedBox(
-                      height: 450,
+                      height: 500,
                       width: double.infinity,
                       child: Stack(
                         children: [
                           Padding(
                             padding: const EdgeInsets.only(top: 30.0),
                             child: Container(
-                              height: 450,
+                              height: 500,
                               width: double.infinity,
                               padding: const EdgeInsets.symmetric(vertical: 30),
                               decoration: const ShapeDecoration(
@@ -125,7 +125,7 @@ class ProductDetailScreen extends StatelessWidget {
                                     ),
                                   ),
                                   const SizedBox(
-                                    height: 20,
+                                    height: 15,
                                   ),
                                   const Padding(
                                     padding:
@@ -136,7 +136,7 @@ class ProductDetailScreen extends StatelessWidget {
                                     ),
                                   ),
                                   const SizedBox(
-                                    height: 10,
+                                    height: 15,
                                   ),
 
                                   SizedBox(
@@ -276,10 +276,19 @@ class ProductDetailScreen extends StatelessWidget {
                                               child: IconButton(
                                                   onPressed: () {
                                                     const snackdemo = SnackBar(
-                                                      content: Text(
-                                                        'Item added to the list',
-                                                        style: TextStyle(
-                                                          color: Colors.white,
+                                                      duration: Duration(
+                                                          seconds: 1,
+                                                          milliseconds: 500),
+                                                      content: Opacity(
+                                                        opacity: .5,
+                                                        child: Center(
+                                                          child: Text(
+                                                            'Item added to the list',
+                                                            style: TextStyle(
+                                                              color:
+                                                                  Colors.white,
+                                                            ),
+                                                          ),
                                                         ),
                                                       ),
                                                       backgroundColor:
