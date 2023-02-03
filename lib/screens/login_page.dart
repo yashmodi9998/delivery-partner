@@ -26,7 +26,7 @@ class _LoginPageState extends State<LoginPage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  height: size.height * 0.4,
+                  height: size.height * 0.45,
                   width: size.width,
                   decoration: const BoxDecoration(
                     image: DecorationImage(
@@ -46,7 +46,7 @@ class _LoginPageState extends State<LoginPage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      TextDivider(txt: 'Sign in to your account'),
+                      const TextDivider(txt: 'Sign in to your account'),
                       Container(
                         decoration: BoxDecoration(boxShadow: [
                           BoxShadow(
