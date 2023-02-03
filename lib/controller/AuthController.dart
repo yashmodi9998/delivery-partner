@@ -1,6 +1,5 @@
 import 'package:deliveryapplication/screens/login_page.dart';
 import 'package:deliveryapplication/screens/products_overview_screen.dart';
-import 'package:deliveryapplication/screens/splash_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
